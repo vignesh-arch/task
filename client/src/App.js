@@ -9,7 +9,7 @@ function App() {
   return (
     <ImageProvider>
       <BrowserRouter>
-        <NavBar />
+        <NavBar></NavBar>
         <Routes>
           <Route path='/' element={<HomePage />} />
           <Route path='/edit/:id' element={<ImageUpdate />} />

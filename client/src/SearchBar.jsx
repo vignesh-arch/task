@@ -36,6 +36,7 @@ function SearchBar() {
         filterOption={() => true}
         onChange={onChangeSelection}
         components={{ DropdownIndicator: null }}
+        style = {{width:'400px'}}
       />
     </Nav.Item>
   );

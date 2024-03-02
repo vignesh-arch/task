@@ -53,7 +53,7 @@ const ImageAddNavItem = () => {
           position='left'
           overlay={<Tooltip id='upload_image'>Upload Image</Tooltip>}
         >
-          <Button>
+          <Button variant='outline-success'>
             Add Image
           </Button>
         </OverlayTrigger>

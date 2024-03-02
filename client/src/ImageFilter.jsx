@@ -29,30 +29,25 @@ const ImageFilter = () => {
 
   return (
     <LocalizationProvider dateAdapter={AdapterDayjs}>
-      <Container>
-        <Row>
-          <Col xs={6} sm={4} md={3} lg={2}>
-            <DateField
-              label='From Date'
-              value={from}
-              onChange={(newValue) => setFrom(newValue)}
-            />
-          </Col>
-          <Col xs={6} sm={4} md={3} lg={2}>
-            <DateField
-              label='To Date'
-              value={to}
-              onChange={(newValue) => setTo(newValue)}
-            />
-          </Col>
-          <Col>
-            <Button type='button' onClick={handleSubmit}>
-              Apply
-            </Button>
-          </Col>
-          <br />
-        </Row>
-      </Container>
+      <Col xs={6} sm={4} md={3} lg={2}>
+        <DateField
+          label='From Date'
+          value={from}
+          onChange={(newValue) => setFrom(newValue)} 
+        />
+      </Col>
+      <Col xs={6} sm={4} md={3} lg={2}>
+        <DateField
+          label='To Date'
+          value={to}
+          onChange={(newValue) => setTo(newValue)}
+        />
+      </Col>
+      <Col>
+        <Button type='button' onClick={handleSubmit}>
+          Apply
+        </Button>
+      </Col>
     </LocalizationProvider>
   );
 };
