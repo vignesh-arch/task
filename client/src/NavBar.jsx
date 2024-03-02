@@ -2,7 +2,6 @@ import React from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
 import ImageAddNavItem from "./ImageAddNavItem.jsx";
 import SearchBar from "./SearchBar.jsx";
-import { NavLink } from "react-router-dom";
 import { LinkContainer } from "react-router-bootstrap";
 
 const NavBar = () => {

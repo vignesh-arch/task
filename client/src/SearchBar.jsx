@@ -1,13 +1,9 @@
 import React from "react";
 import AsyncSelect from 'react-select/async';
-import { useImageContext } from "./ImageContext";
 import { useNavigate } from 'react-router-dom';
-import { useState } from 'react';
 import SERVER_ENDPOINT from "./config";
 
 function SearchBar() {
-  const [query, setQuery] = useState(null);
-  const { imageData } = useImageContext();
   const navigate = useNavigate();
 
   async function loadOptions(term){

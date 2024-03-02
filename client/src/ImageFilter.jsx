@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Col, Form, Row, Button, Container } from "react-bootstrap";
+import { Col, Button, Row, Container } from "react-bootstrap";
 import { DateField } from "@mui/x-date-pickers/DateField";
 import { LocalizationProvider } from "@mui/x-date-pickers";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
@@ -28,29 +28,32 @@ const ImageFilter = () => {
   }
 
   return (
-    <Row>
-      <Col xs={6} sm={4} md={3} lg={2}>
-        <LocalizationProvider dateAdapter={AdapterDayjs}>
-          <Form.Group>
-            <Form.Label>From Date</Form.Label>
+    <LocalizationProvider dateAdapter={AdapterDayjs}>
+      <Container>
+        <Row>
+          <Col xs={6} sm={4} md={3} lg={2}>
             <DateField
               label='From Date'
               value={from}
               onChange={(newValue) => setFrom(newValue)}
             />
-            <Form.Label>To Date</Form.Label>
+          </Col>
+          <Col xs={6} sm={4} md={3} lg={2}>
             <DateField
               label='To Date'
               value={to}
               onChange={(newValue) => setTo(newValue)}
             />
+          </Col>
+          <Col>
             <Button type='button' onClick={handleSubmit}>
               Apply
             </Button>
-          </Form.Group>
-        </LocalizationProvider>
-      </Col>
-    </Row>
+          </Col>
+          <br />
+        </Row>
+      </Container>
+    </LocalizationProvider>
   );
 };
 

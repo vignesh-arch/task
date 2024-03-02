@@ -1,6 +1,6 @@
 import React from 'react';
 import ImageContainer from "./ImageContainer.jsx";
-import { Container, Pagination, } from "react-bootstrap";
+import { Stack, Pagination, } from "react-bootstrap";
 import { useImageContext } from "./ImageContext.jsx";
 import ImageFilter from "./ImageFilter.jsx";
 import { LinkContainer } from "react-router-bootstrap";
@@ -47,11 +47,9 @@ const HomePage = ({ }) => {
     )
   };
   return (
-    <>
+    <Stack gap={3}>
       <ImageFilter/>
-      <Container>
-        {feeds}
-      </Container>
+      {feeds}
       <Pagination>
         <PageLink params={params} page={prevSection}>
           <Pagination.Item>{'<'}</Pagination.Item>
@@ -61,7 +59,7 @@ const HomePage = ({ }) => {
           <Pagination.Item>{'>'}</Pagination.Item>
         </PageLink>
       </Pagination>
-    </>
+    </Stack>
   );
 };
 
