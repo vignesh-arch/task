@@ -43,7 +43,8 @@ app.get("/getImages/:data?", async (req, res) => {
       if (data.from) filter.created.$gte = new Date(data.from);
       if (data.to) filter.created.$lte = new Date(data.to);
     }
-    if (data.search) filter.$text = { $search: search };
+    if (data.search) filter.$text = { $search: data.search };
+    console.log(filter)
     if (data.page) {
       page = parseInt(data.page, 10);
     }

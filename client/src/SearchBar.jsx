@@ -11,7 +11,7 @@ function SearchBar() {
     if (term.length < 3) return [];
     
     const data = {
-      query: term
+      search: term
     }
     const response = await fetch(`${SERVER_ENDPOINT}/getImages/${JSON.stringify(data)}`, {
       method: 'GET'
