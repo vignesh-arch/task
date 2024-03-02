@@ -5,6 +5,7 @@ import { LocalizationProvider } from "@mui/x-date-pickers";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import SERVER_ENDPOINT from "./config.js";
 import { useImageContext } from "./ImageContext";
+import DatePicker from 'react-datepicker';
 
 const ImageFilter = () => {
   const [from, setFrom] = useState(null);
@@ -44,7 +45,7 @@ const ImageFilter = () => {
         />
       </Col>
       <Col>
-        <Button type='button' onClick={handleSubmit}>
+        <Button style={{ height: '3.4rem', width: '5rem' }} type='button' onClick={handleSubmit}>
           Apply
         </Button>
       </Col>
