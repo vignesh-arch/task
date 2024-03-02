@@ -9,7 +9,7 @@ import {
   Nav,
 } from "react-bootstrap";
 
-import SERVER_ENDPOINT from "./config.js"
+import SERVER_ENDPOINT from "./config.js";
 
 import { Plus } from "react-bootstrap-icons";
 import { useImageContext } from "./ImageContext.jsx";
@@ -18,7 +18,7 @@ const ImageAddNavItem = () => {
   const [showing, setShowing] = useState(false);
   const formRef = useRef(null);
   const { loadData } = useImageContext();
-  
+
   const showModal = () => {
     setShowing(true);
   };
@@ -53,7 +53,9 @@ const ImageAddNavItem = () => {
           position='left'
           overlay={<Tooltip id='upload_image'>Upload Image</Tooltip>}
         >
-          <Plus size={30} />
+          <Button>
+            Add Image
+          </Button>
         </OverlayTrigger>
       </Nav.Item>
       <Modal show={showing} onHide={hideModal}>
@@ -64,9 +66,9 @@ const ImageAddNavItem = () => {
           <Form ref={formRef} name='imageAdd' onSubmit={handleSubmit}>
             <Form.Group>
               <Form.Label>Select Image</Form.Label>
-              <Form.Control name="image" type='file' />
+              <Form.Control name='image' type='file' />
               <Form.Label>Caption</Form.Label>
-              <Form.Control name="caption" type='text' />
+              <Form.Control name='caption' type='text' />
             </Form.Group>
           </Form>
         </Modal.Body>

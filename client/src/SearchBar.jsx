@@ -1,7 +1,8 @@
 import React from "react";
 import AsyncSelect from 'react-select/async';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, } from 'react-router-dom';
 import SERVER_ENDPOINT from "./config";
+import { Nav } from "react-bootstrap";
 
 function SearchBar() {
   const navigate = useNavigate();
@@ -27,14 +28,16 @@ function SearchBar() {
   }
 
   return (
-    <AsyncSelect
-      instanceId='search-select'
-      value=''
-      loadOptions={loadOptions}
-      filterOption={() => true}
-      onChange={onChangeSelection}
-      components={{ DropdownIndicator: null }}
-    />
+    <Nav.Item>
+      <AsyncSelect
+        instanceId='search-select'
+        value=''
+        loadOptions={loadOptions}
+        filterOption={() => true}
+        onChange={onChangeSelection}
+        components={{ DropdownIndicator: null }}
+      />
+    </Nav.Item>
   );
 }
 

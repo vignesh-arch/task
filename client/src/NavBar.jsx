@@ -1,5 +1,5 @@
 import React from "react";
-import { Navbar, Nav, Container } from "react-bootstrap";
+import { Navbar, Nav, Col, Container } from "react-bootstrap";
 import ImageAddNavItem from "./ImageAddNavItem.jsx";
 import SearchBar from "./SearchBar.jsx";
 import { LinkContainer } from "react-router-bootstrap";
@@ -17,7 +17,9 @@ const NavBar = () => {
             </LinkContainer>
           </Nav>
           <Nav className='justify-content-end'>
-            <SearchBar />
+            <Col style={{width:'30rem'}}>
+              <SearchBar />
+            </Col>
             <ImageAddNavItem />
           </Nav>
         </Navbar.Collapse>
